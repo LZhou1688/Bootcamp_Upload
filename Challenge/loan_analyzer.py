@@ -132,7 +132,6 @@ def calc_present_value(future_value,remaining_months, annual_discount_rate):
 # YOUR CODE HERE!
 
 
-
 present_value = calc_present_value(new_loan.get("future_value"), new_loan.get("remaining_months"),.2)
 print(f"The present value of the loan is: {present_value}")
 
@@ -177,13 +176,18 @@ loans = [
 
 # @TODO: Create an empty list called `inexpensive_loans`
 # YOUR CODE HERE!
+inexpensive_loans = []
 
 # @TODO: Loop through all the loans and append any that cost $500 or less to the `inexpensive_loans` list
 # YOUR CODE HERE!
+for loan in loans:   
+    if loan["loan_price"]<=500:
+        inexpensive_loans.append(loan)
 
 # @TODO: Print the `inexpensive_loans` list
 # YOUR CODE HERE!
 
+print(inexpensive_loans)
 
 """Part 5: Save the results.
 
